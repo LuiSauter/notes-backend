@@ -7,9 +7,8 @@ console.log(connectionString, 'MyConnectionString')
 // cuando la coneccion sea abierta ejecute algo por consola
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
+  useUnifiedTopology: true
+
 })
   .then(() => {
     console.log('Database is connected')
