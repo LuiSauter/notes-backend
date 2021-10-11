@@ -12,7 +12,7 @@ mongoose.connect(connectionString, {
   useCreateIndex: true
 })
   .then(() => {
-    console.log('Database connected')
+    console.log('Database is connected')
   }).catch(err => {
     console.error(err)
   })
