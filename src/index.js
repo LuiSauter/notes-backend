@@ -3,9 +3,10 @@ require('dotenv').config()
 const app = require('./app')
 require('./database')// no necesita ser importado solo se ejecutara la db
 
-const main = async () => {
-  await app.listen(app.get('port'))// obtenemos el valor 4000
-  console.log('server on port', app.get('port'))
-}
+const PORT = process.env.PORT || 4000
+const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
+// obtenemos el valor 4000
 
-main()
+module.exports = { app, server }

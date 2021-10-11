@@ -6,7 +6,7 @@ const handleErrors = require('./middleware/handleErrors')
 const app = express()
 
 // settings - configurar el server
-app.set('port', process.env.PORT || 4000) // es una variable set()
+// app.set('port', process.env.PORT || 4000) // es una variable set()
 
 // middlewares - definir algunas funciones que se ejecutaran antes que lleguen a las rutas
 app.use(cors())
