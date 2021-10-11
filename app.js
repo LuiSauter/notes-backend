@@ -1,8 +1,8 @@
 // Codigo del servidor o framework
 const express = require('express')
 const cors = require('cors')
-const notFound = require('./middleware/notFound')
-const handleErrors = require('./middleware/handleErrors')
+const notFound = require('./src/middleware/notFound')
+const handleErrors = require('./src/middleware/handleErrors')
 const app = express()
 
 // settings - configurar el server
@@ -17,8 +17,8 @@ app.get('/', (request, response) => {
   response.send('<h1>My First API</h1>')
 })
 // cuando solicitemos esta url usamos otra logica de otro file
-app.use('/api/users', require('./routes/users'))
-app.use('/api/notes', require('./routes/notes'))
+app.use('/api/users', require('./src/routes/users'))
+app.use('/api/notes', require('./src/routes/notes'))
 
 // manejo de errores
 app.use(notFound)
