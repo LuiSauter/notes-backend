@@ -12,5 +12,5 @@ mongoose.connect(connectionString).then(() => {
 // por si se rompe algo quitamos la coneccion para que no quede zombie
 process.on('uncaughtException', (err) => {
   console.log(err)
-  mongoose.connection.disconnect()
+  mongoose.disconnect()
 })
